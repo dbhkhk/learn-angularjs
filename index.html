@@ -7,8 +7,14 @@
 		<!-- <link rel="stylesheet" href="todo.css"> -->
 	</head>
 	<body>
-		<div class="container">
-			Name: <input type="text" ng-model="name"> {{name}}
+		<div class="container" ng-init="names=['John Smith', 'John Doe', 'Jane Doe']">
+			Name: 
+			<br>
+			<input type="text" ng-model="name"> {{name}}
+			<br>
+			<ul>
+				<li ng-repeat="personName in names">{{personName}}</li>
+			</ul>
 		</div>
 		<script src="angular.min.js"></script>
 	</body>
